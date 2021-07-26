@@ -1,0 +1,330 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Question 1
+
+**The life in hours of a battery is known to be approximately normally distributed with standard deviation σ=1.25 hours. A random sample of 10 batteries has a mean life of $\bar{x}=40.5$ hours.**
+
+**A. Is there evidence to support the claim that battery life exceeds 40 hours? Use $α=0.05$.**
+
+**B. What is the P-value for the test in part A?**
+
+**C. What is the β-error for the test in part B if the true mean life is 42 hours?**
+
+**D. What sample size would be required to ensure that β does not exceed 0.10 if the true mean is 44 hours?**
+
+**E. Explain how you could answer the question in part A by calculating an appropriate confidence bound on battery life.**
+
+<img src="https://scx1.b-cdn.net/csz/news/800a/2015/thehistoryan.jpg"/>
+
+Image Source: <https://phys.org/news/2015-04-history-batteries.html>
+
+* * *
+
+## A. Is there evidence to support the claim that battery life exceeds 40 hours? Use α=0.05.
+
+$H_0: \mu=40$
+
+$H_1: \mu<40$
+
+$\bar{x}=40.5$
+
+$\sigma = 1.25$
+
+$\alpha = 0.05$
+
+$n=10$
+
+
+
+*P-value*$< \alpha$*, then we reject *$H_0$
+
+*P-value*$> \alpha$*, then we accept *$H_0$
+
+$Z_0 > Z_{value}$*, then we reject *$H_0$
+
+$Z_0 < Z_{value}$*, then we accept *$H_0$
+
+We can look for the confidence level $C$
+
+$$
+C = 1 - \alpha = 1 - 0.05 = 0.95
+$$
+
+$$
+Z^2 = \frac{\alpha}{2} + C = 0.025 + 0.95 = 0.975
+$$
+
+Look for $0.975$ on the table to look for the Z-Value.
+
+<img src="https://www.ztable.net/wp-content/uploads/2018/11/positiveztable.png"/>
+
+Image Source: <https://www.ztable.net/>
+
+$$
+1+0.96=1.96
+$$
+
+Look for $Z_0$
+
+$$
+Z_0 = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}
+$$
+
+$$
+Z_0 = \frac{40.5 - 40}{1.25/\sqrt{10}}
+$$
+
+$$
+Z_0 = 1.2649 \approx 1.26
+$$
+$$
+1.26 < 1.96
+$$
+
+$$
+Z_0 < Z_{value}
+$$
+
+*Therefore, we accept* $H_0$
+
+Use $Z_0 = 1.26$ in the table
+
+Look for $0.975$ on the table to look for the Z-Value.
+
+<img src="https://www.ztable.net/wp-content/uploads/2018/11/positiveztable.png"/>
+
+Image Source: <https://www.ztable.net/>
+
+$$
+z^2 = 0.8962
+$$
+
+Look for the *P-Value*
+
+$$
+P = 1 - z^2 = 1 - 0.8962
+$$
+
+$$
+P = 0.1038
+$$
+
+$$
+P_{value} = 2(0.1038) = 0.2076
+$$
+
+$$
+0.2076 > 0.05
+$$
+
+$$
+P_{Value} > \alpha
+$$
+
+*Therefore, we accept* $H_0$
+
+**Final Answer:**
+
+***Both tests shows evidence that support the claim that battery life exceeds 40 hours***
+
+* * *
+
+## B. What is the P-value for the test in part A?
+
+***This was already answered in part A.***
+
+$$
+P = 1 - z^2 = 1 - 0.8962
+$$
+
+$$
+P = 0.1038
+$$
+
+**Final Answer:**
+
+$$
+P_{value} = 2(0.1038) = 0.2076
+$$
+
+* * *
+
+## C. What is the β-error for the test in part B if the true mean life is 42 hours?
+
+*If* $\mu_2 = 42$
+
+$\mu_1 = 40$
+
+$\bar{x}_1 = 40.5$
+
+$$
+\bar{x}_1 - \mu_1 = 40.5 - 40
+$$
+
+$$
+\bar{x}_1 - \mu_1 = 0.5
+$$
+
+$$
+\bar{x}_2 = 41 + 0.05
+$$
+
+$$
+\bar{x}_2 = 41.5
+$$
+
+$$
+Z_1 = \frac{\bar{x}_1 - \mu_2 }{\sigma / \sqrt{n}}
+$$
+
+$$
+Z_1 = \frac{40.5 - 42}{1.25 / \sqrt{10}}
+$$
+
+$$
+Z_1 = -3.7947 \approx -3.79
+$$
+
+$$
+Z_2 = \frac{\bar{x}_2 - \mu_2}{\sigma / \sqrt{n}}
+$$
+
+$$
+Z_2 = \frac{41.5 - 42}{1.25 / \sqrt{10}}
+$$
+
+$$
+Z_2 = -1.2649 \approx -1.26
+$$
+
+$$
+Z_1 = -3.79 = -3.7 + (-0.09)
+$$
+
+$$
+Z_2 = -1.26 = -1.2 + (-0.06)
+$$
+
+<img src="https://www.ztable.net/wp-content/uploads/2018/11/negativeztable.png"/>
+
+Image Source: <https://www.ztable.net/>
+
+$Z^2_1 = 0.00008$
+
+$Z^2_2 = 0.10383$
+
+$$
+\beta = P(Z_1 < z < Z_2)
+$$
+
+$$
+\beta = P(-3.7947 < z < -1.2649)
+$$
+
+$$
+\beta = P(-3.7947 < z < -1.2649)
+$$
+
+$$
+\beta = 0.10383 - 0.00008
+$$
+
+
+**Final Answer:**
+
+$$
+\beta = 0.10375 \approx 0.1038
+$$
+
+* * *
+
+## D. What sample size would be required to ensure that β does not exceed 0.10 if the true mean is 44 hours?
+
+*If* $\mu = 44$
+
+$$
+\beta = Z^2_4 = Z^2_3
+$$
+
+Use two ***Z*** values in which their respective $Z^2$ will have a difference that is less than 0.10.
+
+<img src="https://www.ztable.net/wp-content/uploads/2018/11/negativeztable.png"/>
+
+Image Source: <https://www.ztable.net/>
+
+$$
+Z_3 = -2.43 = -2.4 + (-0.03)
+$$
+
+$$
+Z^2_3 = 0.00755
+$$
+
+$$
+Z_4 = -1.24= -1.2 + (-0.04)
+$$
+
+$$
+Z^2_4 = 0.10749
+$$
+
+$$
+\beta = 0.10749 - 0.00755
+$$
+
+$$
+\beta = 0.09994
+$$
+
+$$
+Z = \frac{\bar{x}-44}{1.25/\sqrt{n}}
+$$
+
+$$
+-2.43 = \frac{43.5-44}{1.25/\sqrt{n}}
+$$
+
+$$
+ \frac{\sqrt{n}(43.5-44)}{1.25} = -2.43
+$$
+
+$$
+ \frac{\sqrt{n}(-0.5)}{1.25} = -2.43
+$$
+
+$$
+\sqrt{n} = 6.075
+$$
+
+$$
+n = 36.91
+$$
+
+**Final Answer:**
+
+$$
+n \approx 37
+$$
+
+* * *
+
+## E. Explain how you could answer the question in part A by calculating an appropriate confidence bound on battery life.
+
+***This was already answered in part A ... again.***
+
+$$
+\alpha = 0.05
+$$
+
+$$
+C = 1 - \alpha = 1 - 0.05
+$$
+
+**Final Answer:**
+
+$$
+C = 0.95
+$$
+
